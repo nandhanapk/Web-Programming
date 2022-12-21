@@ -1,0 +1,208 @@
+login.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="./design.css">
+</head>
+<body>
+    <center>
+    <h1>FOOTBALL CLUB PORTAL</h1>
+    <h2>LOGIN</h2>
+    <form action="">
+    <b>USERNAME :</b> 
+    <input type="text" id="username"><br><br>
+    <span id="usernameErr"></span><br>
+    <b>PASSWORD : </b>
+    <input type="password" id="password"><br><br>
+    <span id="passwordErr"></span><br>
+    <button id="btn" value="submit"><a href="registration.html"</a>LOGIN</button>
+    
+</form>
+    </center>
+    <script src="./val.js"></script>
+</body>
+</html>
+
+val.js
+
+const username=document.getElementById("username");
+const usernameErr=document.getElementById("usernameErr")
+const password=document.getElementById("password");
+const passwordErr=document.getElementById("passwordErr")
+btn.addEventListener("click",function(e){
+    e.preventDefault();
+    usernameErr.textContent = "";
+    passwordErr.textContent="";
+
+    if(!username.value){
+        usernameErr.textContent = "Please Enter your Username"
+    }
+    if(!password.value){
+        passwordErr.textContent="Please Enter your Password"
+    }
+    if(username.value=="nandhana" && password.value=="password"){
+        alert("Login Sucessful");
+        <a href="registration.html"></a>
+    
+    }
+        else{
+        alert("Login Failed");
+        }
+    }
+)
+
+Registration.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION PAGE</title>
+    <link rel="stylesheet" href="./design.css">
+</head>
+<body>
+    <center>
+    <h1>REGISTRATION PAGE</h1>
+    </center>
+    <form action="">
+        NAME        :
+        <input type="text" id="name"><br><br>
+        <span id="nameErr"></span><br>
+        ADDRESS     :
+        <input type="text" id="address"><br><br>
+        <span id="addressErr"></span><br>
+        PHONE NUMBER :
+        <input type="text" id="phn"><br><br>
+        <span id="phnErr"></span><br>
+        CLUB NAMES   :
+        <br>
+        <input type="radio" id="club">MFC<br>
+        <input type="radio" id="club">MC<br>
+        <input type="radio" id="club">KBC<br>
+        <span id="clubErr"></span><br>
+        LOCATION     :
+        <select id="location" name="location">  
+            <option value="Kollam">Kollam</option>  
+            <option value="Kozhikode">Kozhikode</option>
+            <option value="Trivandrum">Trivandrum</option>  
+            <option value="Kochi">Kochi</option> 
+    
+        
+    </select>
+    <span id="locationErr"></span><br>
+    <br>
+    DATE :
+  <input type="date" name="date" id="date"><br>
+  <span id="dateErr"></span><br>
+  COACH :
+  <input type="checkbox" name="Jacob" id="c1">Jacob
+  <input type="checkbox" name="George" id="c1">George
+  <input type="checkbox" name="Sunny" id="c1">Sunny
+  <br><br>
+  <span id="coachErr"></span>
+  <button id="btn">SUBMIT<a href="./final.html"></a></button>
+     </form>
+<script src="./vl.js"></script>
+</body>
+</html>
+
+vl.js
+
+const name=document.getElementById("name")
+const nameErr=document.getElementById("nameErr")
+const address=document.getElementById("address")
+const addressErr=document.getElementById("addressErr")
+const phn=document.getElementById("phn")
+const phnErr=document.getElementById("phnErr")
+
+const c1=document.getElementById("c1")
+const date=document.getElementById("date")
+const dateErr=document.getElementById("dateErr")
+const club=document.getElementById("club")
+const clubErr=document.getElementById("clubErr")
+const btn=document.getElementById("btn")
+
+btn.addEventListener("click",function(e){
+    e.preventDefault();
+    nameErr.textContent = "";
+    addressErr.textContent="";
+    phnErr.textContent="";
+    
+    dateErr.textContent="";
+    coachErr.textContent="";
+    clubErr.textContent="";
+
+    if(!name.value){
+        nameErr.textContent="Please enter your name"
+    }
+    if(!address.value){
+        addressErr.textContent="Please enter the Address"
+
+    }
+    if(!phn.value){
+        phnErr.textContent="Please enter the Phone number"
+    }
+    if(isNaN(phn.value)){
+        phnErr.textContent= "Phone number must be digits"
+
+    }
+    
+    if(!date.value){
+        dateErr.textContent="Please Select a date"
+    }
+    if(!c1.value){
+        coachErr.textContent="Please select a coach"
+    }
+    }
+)
+
+final.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./design.css">
+</head>
+<body>
+    <center>
+        <h1>REGISTERED SUCESSFULLY</h1>
+    </center>
+</body>
+</html>
+
+design.css
+
+.container
+{
+    margin-left: auto;
+    margin-right:auto;
+}
+body{
+    background-color: khaki;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+   
+    color: darkred;
+    }
+    h1{
+        color: darkred;
+    }
+    h2{
+        color: orangered;
+    }
+button{
+    background-color: orange;
+    font-family:Arial, Helvetica, sans-serif ;
+    color: white;
+}
